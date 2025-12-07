@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jerald | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- ========== LOGIN SCREEN ========== -->
+    <div id="loginPage" class="login-card">
+      <h1 class="login-title">Portfolio Login</h1>
+      <p class="login-subtitle">Please log in to view your portfolio website.</p>
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="username">Username or Email</label>
+          <input type="text" id="username" name="username" placeholder="Enter username or email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required minlength="4"/>
+          <div class="helper-text">
+            Sample credentials for testing:<br />
+            <strong>Username:</strong> Jerald Camingao<br />
+            <strong>Password:</strong> 251-00573
+          </div>
+        </div>
+        <div id="loginError" class="error-message">Invalid username or password.</div>
+        <button type="submit" class="btn btn-primary" style="margin-top:15px;">Log In</button>
+        <div id="loginSuccess" class="success-message">Login successful! Redirecting...</div>
+      </form>
+    </div>
+
+    <!-- ========== PORTFOLIO SCREEN ========== -->
+    <div id="portfolioPage" class="portfolio">
+      <header>
+        <div class="logo">Jerald • Portfolio</div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button id="logoutBtn" class="btn-logout">Logout</button>
+      </header>
+
+      <main>
+        <div id="logoutMessage" class="logout-message">You have been logged out successfully.</div>
+
+        <!-- Home Section -->
+        <section id="home">
+          <div class="hero">
+            <div class="hero-text">
+              <div class="hero-badge">Welcome to my portfolio 👋</div>
+              <h1>Hi, I'm <span>Jerald</span></h1>
+              <p class="hero-tagline">
+                An aspiring IT professional passionate about web development, problem solving, and continuous learning.
+              </p>
+            </div>
+            <div class="hero-image">
+              <div class="hero-avatar">JC</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I am a college student currently taking up a course related to Information Technology.
+            I enjoy building applications, learning new technologies, and collaborating with others.
+          </p>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+          <h2>Education</h2>
+          <div class="about-grid">
+            <div class="card">
+              <h3>High School</h3>
+              <p>Completed at Cabadbaran City National High School, 2023-2025</p>
+            </div>
+            <div class="card">
+              <h3>College</h3>
+              <p>Currently taking up Information Technology, To learn more about coding for the future</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="achievements">
+          <h2>achievements</h2>
+          <div class="about-grid">
+            <div class="card">
+              <h3>I passed in NATIONAL CERTIFECATE 2/NC2 on ICT last year</h3>
+              <p>
+                I also won 3rd place on ICT competetion of our school in high school.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Freelance Projects</h3>
+              <p>
+                Formatting and installing windows of my neighbors PC or loptap 
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skills">
+          <h2>Skills</h2>
+          <div class="about-grid">
+            <div class="card">
+              <h3>Programming Languages</h3>
+              <p>Currently Learning HTML, CSS, JavaScript, Python, Java (basic)</p>
+            </div>
+            <div class="card">
+              <h3>Tools & Technologies</h3>
+              <p>Git, GitHub, VS Code, Browser Dev Tools</p>
+            </div>
+            <div class="card">
+              <h3>Soft Skills</h3>
+              <p>Problem Solving, Teamwork, Communication, Adaptability</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <div class="contact-form">
+              <form id="contactForm" novalidate>
+                <div class="form-group">
+                  <label for="contactName">Name</label>
+                  <input type="text" id="contactName" name="contactName" required placeholder="Your name" />
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail">Email</label>
+                  <input type="email" id="contactEmail" name="contactEmail" required placeholder="your@email.com" />
+                </div>
+                <div class="form-group">
+                  <label for="contactMessage">Message</label>
+                  <textarea id="contactMessage" name="contactMessage" rows="4" required placeholder="Your message here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <div id="contactError" class="error-message">Please complete all fields.</div>
+                <div id="contactSuccess" class="success-message">Thank you! Your message has been recorded.</div>
+              </form>
+            </div>
+            <div class="contact-info">
+              <p><span>Email:</span> Jeraldcamingao@gmail.com</p>
+              <p><span>Location:</span> Brgy. Comagascas Purok 1B, Cabadbaran City</p>
+              <p><span>GitHub:</span> <a href="#">github.com/jeraldcamingao-Csucc</a></p>
+              <p><span>Goal:</span> Graduate and become a successful IT professional.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        © <span id="year"></span> Jerald • Portfolio Project. All rights reserved.
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
